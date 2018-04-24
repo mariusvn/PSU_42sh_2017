@@ -1,0 +1,11 @@
+a.out
+CMakeLists.txt
+.idea
+cmake-build-debug
+mysh
+moulis/
+*.o
+*.a
+build/
+include/linkify.h
+include/my.h
