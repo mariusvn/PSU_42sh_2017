@@ -8,7 +8,7 @@
 SRC		=	$(wildcard src/*/*.c)	\
 			$(wildcard src/*.c)
 
-NAME	=	mysh
+NAME	=	42sh
 
 CFLAGS	=	-I include -L lib/my -lmy -g -W -Wall -Wextra -L lib/linkify \
 		-Wno-unused-parameter -Wno-unused-variable -llinkify
