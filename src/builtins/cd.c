@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2017
-** minishell1_2017
+** 42sh
 ** File description:
 ** cd.c created: 02/01/18 18:15
 */

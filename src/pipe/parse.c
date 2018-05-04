@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2017
-** minishell2_2017
+** 42sh
 ** File description:
 ** parse.c created: 11/04/18 12:58
 */

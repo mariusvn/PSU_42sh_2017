@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2017
-** minishell1_2017
+** 42sh
 ** File description:
 ** main.c
 */

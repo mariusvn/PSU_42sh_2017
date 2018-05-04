@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2017
-** minishell1_2017
+** 42sh
 ** File description:
 ** setenv.c created: 03/01/18 14:33
 */

@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2017
-** minishell2_2017
+** 42sh
 ** File description:
 ** tmp.c created: 12/04/18 14:11
 */

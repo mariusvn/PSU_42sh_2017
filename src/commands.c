@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2017
-** minishell1_2017
+** 42sh
 ** File description:
 ** commands.c created: 03/01/18 11:14
 */

@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2017
-** minishell1_2017
+** 42sh
 ** File description:
 ** env.c created: 03/01/18 10:55
 */

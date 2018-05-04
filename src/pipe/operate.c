@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2017
-** minishell2_2017
+** 42sh
 ** File description:
 ** operate.c created: 13/04/18 14:12
 */

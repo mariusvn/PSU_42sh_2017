@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2017
-** minishell2_2017
+** 42sh
 ** File description:
 ** semicolon.c created: 15/04/18 13:15
 */
