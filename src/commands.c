@@ -5,13 +5,14 @@
 ** commands.c created: 03/01/18 11:14
 */
 
-#include <minishell.h>
+#include <shell.h>
 #include <unistd.h>
 #include <my.h>
 #include <fcntl.h>
 #include <sys/wait.h>
 #include <stdbool.h>
 
+/// Put a slash on the end of the path str
 char *put_end_slash(char *path)
 {
 	char *npath;
@@ -24,6 +25,7 @@ char *put_end_slash(char *path)
 	return (path);
 }
 
+/// Check if the binary exists
 bool is_exists(char *path)
 {
 	int fd = open(path, O_RDONLY);
@@ -35,6 +37,7 @@ bool is_exists(char *path)
 	return (false);
 }
 
+// find the binary of the command in PATH
 char *find_in_path(ressources_t *rsces, char *str)
 {
 	char *path_str = get_env_var("PATH", rsces->env);

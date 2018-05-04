@@ -5,7 +5,7 @@
 ** env.c created: 03/01/18 10:55
 */
 
-#include <minishell.h>
+#include <shell.h>
 #include <my.h>
 
 int env_shell(char **args, ressources_t* rsces)

@@ -8,7 +8,7 @@
 #ifndef MINISHELL2_2017_PARSE_H_
 #define MINISHELL2_2017_PARSE_H_
 
-#include "minishell.h"
+#include "shell.h"
 
 typedef enum op_type_e {
 	SEMICOLON,
@@ -39,8 +39,6 @@ void parse_node(bt_node_t *node, ressources_t *rsces);
 bt_node_t *create_bt_node(void);
 
 void create_child_nodes(bt_node_t *parent);
-
-char *clean_str_pipe(char *str);
 
 void parse_node_step(char *sentence, bt_node_t *parent,
 		     int i[2], ressources_t *rsces);

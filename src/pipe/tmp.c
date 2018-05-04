@@ -2,10 +2,10 @@
 ** EPITECH PROJECT, 2017
 ** 42sh
 ** File description:
-** tmp.c created: 12/04/18 14:11
+** Temporary file for debug
 */
 
-#include <minishell.h>
+#include <shell.h>
 #include <linkify.h>
 #include <stdlib.h>
 #include <my.h>
@@ -29,7 +29,7 @@ void exec_prog(char *input, ressources_t *rsces)
 	char **args;
 	int pos;
 
-	input = clean_str_pipe(input);
+	input = clean_str(input);
 	args = split_shell(input, " \t");
 	pos = is_builtin(args[0]);
 	if (pos != -1) {

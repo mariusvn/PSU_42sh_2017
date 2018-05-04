@@ -23,6 +23,7 @@ bool is_right_var(char *name, char *env, int *pos)
 		return (false);
 }
 
+/// return the content (dup) of an env var
 char *get_env_var(char *name, char **env)
 {
 	int pos;

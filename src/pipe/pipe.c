@@ -5,12 +5,13 @@
 ** pipe.c created: 12/04/18 11:47
 */
 
-#include <minishell.h>
+#include <shell.h>
 #include <unistd.h>
 #include <my.h>
 #include <fcntl.h>
 #include <sys/wait.h>
 
+/// execute a pipe node in the binary tree
 void execute_pipe(bt_node_t *node, ressources_t *rsces)
 {
 	int fd[2];
@@ -29,9 +30,9 @@ void execute_pipe(bt_node_t *node, ressources_t *rsces)
 	if (node->in != 0)
 		node->child[0]->in = node->in;
 	execute_bt_node(node->child[1], node->child[0], rsces);
-	//execute_bt_node(node->child[0], rsces);
 }
 
+/// execute a command when we already forked
 void execute_cmd_forked(char **args, ressources_t *rsces)
 {
 	char *pgrm;
@@ -47,11 +48,10 @@ void execute_cmd_forked(char **args, ressources_t *rsces)
 	execve(pgrm, args, rsces->env);
 }
 
-void execute_cmd_node_b(bt_node_t *node, ressources_t *rsces)
+/// Second part of execute_cmd_node (fd general handling)
+static void execute_cmd_node_b(bt_node_t *node, ressources_t *rsces)
 {
 	char **args;
-	int pos;
-	char *cmd;
 
 	if (node->in != 0) {
 		close(0);
@@ -67,6 +67,7 @@ void execute_cmd_node_b(bt_node_t *node, ressources_t *rsces)
 	execute_cmd_forked(args, rsces);
 }
 
+/// Execute a builtin
 void execute_builtin(bt_node_t *node, int pos, ressources_t *rsces)
 {
 	int saves[2];
@@ -92,12 +93,12 @@ void execute_builtin(bt_node_t *node, int pos, ressources_t *rsces)
 	dup(saves[1]);
 }
 
+/// Execute a node with NONE type (standard command, no pipe, etc ...)
 void execute_cmd_node(bt_node_t *node, bt_node_t *next, ressources_t *rsces)
 {
 	int pid;
 	char **args = split_shell(node->sentence, " \t");
 	int pos = is_builtin(args[0]);
-	char *cmd;
 
 	if (pos != -1) {
 		execute_builtin(node, pos, rsces);

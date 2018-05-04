@@ -7,7 +7,7 @@
 
 #include <stdlib.h>
 #include <my.h>
-#include <minishell.h>
+#include <shell.h>
 
 bool is_digit(char c, int pos)
 {

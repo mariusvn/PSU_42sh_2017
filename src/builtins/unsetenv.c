@@ -5,7 +5,7 @@
 ** unsetenv.c created: 03/01/18 14:55
 */
 
-#include <minishell.h>
+#include <shell.h>
 #include <stdlib.h>
 #include <my.h>
 #include <stdbool.h>

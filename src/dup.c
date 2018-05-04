@@ -6,8 +6,9 @@
 */
 
 #include <my.h>
-#include <minishell.h>
+#include <shell.h>
 
+/// Duplicate a double array
 char **dup_double_array(char **arr)
 {
 	int len = my_array_length((void **) arr);
@@ -23,6 +24,7 @@ char **dup_double_array(char **arr)
 	return (res);
 }
 
+/// Put a std PATH env var if env is empty
 void init_empty_env(ressources_t *rsces)
 {
 	char *path[4] = {"setenv", "PATH", \

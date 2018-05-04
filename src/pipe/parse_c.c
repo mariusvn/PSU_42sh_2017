@@ -6,8 +6,9 @@
 */
 
 #include <my.h>
-#include <minishell.h>
+#include <shell.h>
 
+/// Check if the node is a PIPE or a REDIRECT
 op_type_t parse_node_c(char *str, int i, bt_node_t *node, ressources_t *rsces)
 {
 	int a[2] = {i, 0};

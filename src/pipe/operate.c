@@ -5,18 +5,22 @@
 ** operate.c created: 13/04/18 14:12
 */
 
-#include <minishell.h>
+#include <shell.h>
 #include <my.h>
 
 /*
- 	SEMICOLON,
-	REDIRECT_LEFT,
-	REDIRECT_RIGHT,
-	DOUBLE_REDIRECT_LEFT,
-	DOUBLE_REDIRECT_RIGHT,
-	PIPE,
-	OPERATION,
-	NONE
+	This file handle a node
+ 	It's the main function that we call to execute the binary tree.
+
+ 	Here are all node types :
+
+ 	SEMICOLON,			;
+	REDIRECT_LEFT,			<
+	REDIRECT_RIGHT,			>
+	DOUBLE_REDIRECT_LEFT,		<<
+	DOUBLE_REDIRECT_RIGHT,		>>
+	PIPE,				|
+	NONE				std command
  */
 
 void execute_bt_node(bt_node_t *node, bt_node_t *nodeb, ressources_t *rsces)

@@ -5,7 +5,7 @@
 ** setenv.c created: 03/01/18 14:33
 */
 
-#include <minishell.h>
+#include <shell.h>
 #include <stdlib.h>
 #include <my.h>
 #include <stdbool.h>

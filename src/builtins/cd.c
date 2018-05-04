@@ -7,7 +7,7 @@
 
 #include <unistd.h>
 #include <my.h>
-#include <minishell.h>
+#include <shell.h>
 #include <limits.h>
 
 char *setenv_cd(char *var, char *content, ressources_t* rsces)

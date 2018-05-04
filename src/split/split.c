@@ -6,7 +6,7 @@
 */
 
 #include <stdlib.h>
-#include <minishell.h>
+#include <shell.h>
 #include <my.h>
 #include <stdbool.h>
 

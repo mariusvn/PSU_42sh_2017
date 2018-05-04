@@ -45,8 +45,6 @@ char **dup_double_array(char **arr);
 
 void init_empty_env(ressources_t *rsces);
 
-char *clean_str(char *str);
-
 bool is_exists(char *path);
 
 bool is_check_perm(char *path, char *zero);
@@ -64,5 +62,7 @@ char *find_in_path(ressources_t *rsces, char *str);
 void handle_return(ressources_t *rsces, int *ret);
 
 void my_signal(void);
+
+char *clean_str(char *str);
 
 #endif
