@@ -98,8 +98,11 @@ void execute_cmd_node(bt_node_t *node, bt_node_t *next, ressources_t *rsces)
 {
 	int pid;
 	char **args = split_shell(node->sentence, " \t");
-	int pos = is_builtin(args[0]);
+	int pos;
 
+	if (my_array_length((void **)args) == 0)
+		return;
+	pos = is_builtin(args[0]);
 	if (pos != -1) {
 		execute_builtin(node, pos, rsces);
 		return;
