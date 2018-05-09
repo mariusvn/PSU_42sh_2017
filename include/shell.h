@@ -1,13 +1,15 @@
 /*
 ** EPITECH PROJECT, 2017
-** minishell1
+** 42sh
 ** File description:
 ** header
 */
 
 
-#ifndef MINISHELL_1
-	#define MINISHELL_1
+#ifndef SHELL_H_
+	#define SHELL_H_
+
+#define DEBUG
 
 #include <stdbool.h>
 

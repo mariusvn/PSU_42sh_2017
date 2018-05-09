@@ -17,6 +17,8 @@ void sig_handler(int sig)
 
 void my_signal(void)
 {
-	signal(SIGSEGV, sig_handler);
-	signal(SIGINT, sig_handler);
+#ifdef DEBUG
+	//signal(SIGSEGV, sig_handler);
+	//signal(SIGINT, sig_handler);
+#endif
 }
