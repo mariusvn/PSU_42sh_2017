@@ -43,8 +43,10 @@ void execute_cmd_forked(char **args, ressources_t *rsces)
 	pgrm = find_in_path(rsces, args[0]);
 	(!pgrm) ? (pgrm = args[0]) : "";
 	perm = is_check_perm(pgrm, args[0]);
-	if (!perm)
+	if (!perm) {
+		exit(0);
 		return;
+	}
 	execve(pgrm, args, rsces->env);
 }
 
