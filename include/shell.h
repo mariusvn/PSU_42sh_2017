@@ -7,7 +7,7 @@
 
 
 #ifndef MINISHELL_1
-	#define MINISHELL_1
+#define MINISHELL_1
 
 #include <stdbool.h>
 
@@ -64,5 +64,6 @@ void handle_return(ressources_t *rsces, int *ret);
 void my_signal(void);
 
 char *clean_str(char *str);
+
 
 #endif
