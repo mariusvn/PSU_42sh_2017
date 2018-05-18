@@ -11,6 +11,7 @@
 #include <stdbool.h>
 #include <shell.h>
 #include <my.h>
+#include <stdio.h>
 
 /// check if the env contains HOME (if yes, set the home path)
 bool is_containing_home(ressources_t *rsces, char **path)
@@ -51,12 +52,12 @@ bool is_check_perm(char *path, char *zero)
 	int perm;
 
 	if (!is_exists(path)) {
-		my_printf("%s: Command not found.\n", zero);
+		printf("%s: Command not found.\n", zero);
 		return (false);
 	}
 	perm = access(path, X_OK);
 	if (perm == -1) {
-		my_printf("%s: Permission denied.\n", zero);
+		printf("%s: Permission denied.\n", zero);
 		return (false);
 	}
 	return (true);
