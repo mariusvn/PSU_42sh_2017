@@ -16,11 +16,11 @@
 
 void execute_r_right(bt_node_t *node, ressources_t *rsces)
 {
-	if (is_exists(node->child[1]->sentence) == true) {
+	if (is_exists(clean_str(node->child[1]->sentence)) == true) {
 		node->child[0]->out = open(node->child[1]->sentence, O_RDWR);
 		execute_bt_node(node->child[0], NULL, rsces);
 		close(node->child[0]->out);
-	} else if(is_exists(node->child[1]->sentence) == false) {
+	} else {
 		node->child[0]->out = open(node->child[1]->sentence, O_CREAT | O_RDWR, S_IRWXU);
 		execute_bt_node(node->child[0], NULL, rsces);
 		close(node->child[0]->out);
@@ -30,5 +30,13 @@ void execute_r_right(bt_node_t *node, ressources_t *rsces)
 
 void execute_r_left(bt_node_t *node, ressources_t *rsces)
 {
-	return;
+	char *str = clean_str(node->child[1]->sentence);
+
+	if (is_exists(str) == true) {
+		node->child[0]->in = open(str, O_RDWR);
+		execute_bt_node(node->child[0], NULL, rsces);
+		close(node->child[0]->in);
+	} else {
+		fprintf(stderr, "42sh: aucun fichier ou dossier de ce type: %s\n", str);
+	}
 }
