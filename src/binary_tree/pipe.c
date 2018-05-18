@@ -45,7 +45,6 @@ void execute_cmd_forked(char **args, ressources_t *rsces)
 	perm = is_check_perm(pgrm, args[0]);
 	if (!perm) {
 		exit(0);
-		return;
 	}
 	execve(pgrm, args, rsces->env);
 }
