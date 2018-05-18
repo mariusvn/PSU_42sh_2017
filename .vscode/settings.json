@@ -1,7 +1,0 @@
-{
-	"files.associations": {
-		"my.h": "c",
-		"fcntl.h": "c",
-		"typeinfo": "c"
-	}
-}

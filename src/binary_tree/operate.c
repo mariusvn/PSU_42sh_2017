@@ -6,6 +6,7 @@
 */
 
 #include <shell.h>
+#include <parse.h>
 #include <my.h>
 
 /*
@@ -37,6 +38,9 @@ void execute_bt_node(bt_node_t *node, bt_node_t *nodeb, ressources_t *rsces)
 			break;
 		case REDIRECT_RIGHT:
 			execute_r_right(node, rsces);
+			break;
+		case REDIRECT_LEFT:
+			execute_r_left(node, rsces);
 			break;
 		default:
 			my_putstr("not handled\n");

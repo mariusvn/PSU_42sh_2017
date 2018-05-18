@@ -59,4 +59,6 @@ void execute_semicolon(bt_node_t *node, ressources_t *rsces);
 
 void execute_r_right(bt_node_t *node, ressources_t *rsces);
 
+void execute_r_left(bt_node_t *node, ressources_t *rsces);
+
 #endif /* !MINISHELL2_2017_PARSE_H_ */
