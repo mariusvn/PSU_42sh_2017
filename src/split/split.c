@@ -1,12 +1,12 @@
 /*
 ** EPITECH PROJECT, 2017
-** PSU_minishell2_2017
+** 42sh
 ** File description:
 ** split.c created: 01/04/18 13:22
 */
 
 #include <stdlib.h>
-#include <minishell.h>
+#include <shell.h>
 #include <my.h>
 #include <stdbool.h>
 

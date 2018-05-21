@@ -1,11 +1,11 @@
 /*
 ** EPITECH PROJECT, 2017
-** minishell1_2017
+** 42sh
 ** File description:
 ** unsetenv.c created: 03/01/18 14:55
 */
 
-#include <minishell.h>
+#include <shell.h>
 #include <stdlib.h>
 #include <my.h>
 #include <stdbool.h>

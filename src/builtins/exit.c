@@ -1,13 +1,13 @@
 /*
 ** EPITECH PROJECT, 2017
-** minishell1_2017
+** 42sh
 ** File description:
 ** exit.c created: 02/01/18 18:59
 */
 
 #include <stdlib.h>
 #include <my.h>
-#include <minishell.h>
+#include <shell.h>
 
 bool is_digit(char c, int pos)
 {

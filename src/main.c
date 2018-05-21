@@ -1,14 +1,15 @@
 /*
 ** EPITECH PROJECT, 2017
-** minishell1_2017
+** 42sh
 ** File description:
 ** main.c
 */
 
 #include <my.h>
-#include <minishell.h>
+#include <shell.h>
 #include <unistd.h>
 
+/// builtins index
 static builtin_t builtins[] = {
 	{"cd", cd},
 	{"exit", exit_shell},
@@ -46,6 +47,7 @@ void exit_verif(void)
 	exit(0);
 }
 
+/// Getter to have the builtin index everywhere
 builtin_t *get_builtins(void)
 {
 	return (builtins);

@@ -1,12 +1,12 @@
 /*
 ** EPITECH PROJECT, 2017
-** minishell2_2017
+** 42sh
 ** File description:
-** signal.c created: 15/04/18 18:02
+** Cheaty file
 */
 
 #include <signal.h>
-#include <minishell.h>
+#include <shell.h>
 #include <stdlib.h>
 
 void sig_handler(int sig)
@@ -17,6 +17,8 @@ void sig_handler(int sig)
 
 void my_signal(void)
 {
-	signal(SIGSEGV, sig_handler);
-	signal(SIGINT, sig_handler);
+#ifdef DEBUG
+	//signal(SIGSEGV, sig_handler);
+	//signal(SIGINT, sig_handler);
+#endif
 }

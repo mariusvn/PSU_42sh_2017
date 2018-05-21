@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2017
-** minishell1_2017
+** 42sh
 ** File description:
 ** environment.c created: 02/01/18 16:55
 */
@@ -23,6 +23,7 @@ bool is_right_var(char *name, char *env, int *pos)
 		return (false);
 }
 
+/// return the content (dup) of an env var
 char *get_env_var(char *name, char **env)
 {
 	int pos;

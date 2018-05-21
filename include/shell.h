@@ -1,13 +1,15 @@
 /*
 ** EPITECH PROJECT, 2017
-** minishell1
+** 42sh
 ** File description:
 ** header
 */
 
 
-#ifndef MINISHELL_1
-	#define MINISHELL_1
+#ifndef SHELL_H_
+	#define SHELL_H_
+
+#define DEBUG
 
 #include <stdbool.h>
 
@@ -45,8 +47,6 @@ char **dup_double_array(char **arr);
 
 void init_empty_env(ressources_t *rsces);
 
-char *clean_str(char *str);
-
 bool is_exists(char *path);
 
 bool is_check_perm(char *path, char *zero);
@@ -64,5 +64,8 @@ char *find_in_path(ressources_t *rsces, char *str);
 void handle_return(ressources_t *rsces, int *ret);
 
 void my_signal(void);
+
+char *clean_str(char *str);
+
 
 #endif

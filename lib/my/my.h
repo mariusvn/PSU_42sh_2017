@@ -53,7 +53,7 @@ char	*my_strlowcase(char *str);
 
 char	*my_strcapitalize(char *str);
 
-int	my_str_isalpha(char const *str);
+int	my_str_isalphanum(char const *str);
 
 int	my_str_isnum(char const *str);
 

@@ -1,14 +1,15 @@
 /*
 ** EPITECH PROJECT, 2017
-** minishell1_2017
+** 42sh
 ** File description:
 ** setenv.c created: 03/01/18 14:33
 */
 
-#include <minishell.h>
+#include <shell.h>
 #include <stdlib.h>
 #include <my.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 int add_env_var(char *new_env, ressources_t *rsces)
 {
@@ -60,6 +61,10 @@ int setenv_shell(char **args, ressources_t *rsces)
 	} else if (len == 1) {
 		env_shell(args, rsces);
 		return (0);
+	}
+	if (!my_str_isalphanum(args[1])) {
+		fprintf(stderr, "setenv: Variable name must "
+		  "contain alphanumeric characters.\n");
 	}
 	new_env = setenv_b(args, len, rsces, &is_set_var);
 	if (!is_set_var)

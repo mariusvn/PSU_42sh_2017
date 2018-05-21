@@ -1,11 +1,11 @@
 /*
 ** EPITECH PROJECT, 2017
-** minishell1_2017
+** 42sh
 ** File description:
 ** env.c created: 03/01/18 10:55
 */
 
-#include <minishell.h>
+#include <shell.h>
 #include <my.h>
 
 int env_shell(char **args, ressources_t* rsces)

@@ -1,5 +1,6 @@
 a.out
 CMakeLists.txt
+.vscode
 .idea
 cmake-build-debug
 mysh
@@ -9,3 +10,4 @@ moulis/
 build/
 include/linkify.h
 include/my.h
+42sh

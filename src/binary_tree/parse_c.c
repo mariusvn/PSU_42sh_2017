@@ -1,13 +1,14 @@
 /*
 ** EPITECH PROJECT, 2017
-** minishell2_2017
+** 42sh
 ** File description:
 ** parse_c.c created: 12/04/18 14:16
 */
 
 #include <my.h>
-#include <minishell.h>
+#include <shell.h>
 
+/// Check if the node is a PIPE or a REDIRECT
 op_type_t parse_node_c(char *str, int i, bt_node_t *node, ressources_t *rsces)
 {
 	int a[2] = {i, 0};
