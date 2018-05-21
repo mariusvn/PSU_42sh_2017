@@ -21,7 +21,7 @@ void execute_r_right(bt_node_t *node, ressources_t *rsces)
 		execute_bt_node(node->child[0], NULL, rsces);
 		close(node->child[0]->out);
 	} else {
-		node->child[0]->out = open(node->child[1]->sentence, O_CREAT | O_RDWR, S_IRWXU);
+		node->child[0]->out = open(clean_str(node->child[1]->sentence), O_CREAT | O_RDWR, S_IRWXU);
 		execute_bt_node(node->child[0], NULL, rsces);
 		close(node->child[0]->out);
 	}
