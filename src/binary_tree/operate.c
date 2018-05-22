@@ -42,6 +42,12 @@ void execute_bt_node(bt_node_t *node, bt_node_t *nodeb, ressources_t *rsces)
 		case REDIRECT_LEFT:
 			execute_r_left(node, rsces);
 			break;
+		case DOUBLE_REDIRECT_RIGHT:
+			execute_dr_right(node, rsces);
+			break;
+		case DOUBLE_REDIRECT_LEFT:
+			execute_dr_left(node, rsces);
+			break;
 		default:
 			my_putstr("not handled\n");
 	}
