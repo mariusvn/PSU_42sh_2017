@@ -16,16 +16,9 @@
 
 void execute_r_right(bt_node_t *node, ressources_t *rsces)
 {
-	if (is_exists(clean_str(node->child[1]->sentence)) == true) {
-		node->child[0]->out = open(node->child[1]->sentence, O_RDWR);
-		execute_bt_node(node->child[0], NULL, rsces);
-		close(node->child[0]->out);
-	} else {
-		node->child[0]->out = open(clean_str(node->child[1]->sentence), O_CREAT | O_RDWR, S_IRWXU);
-		execute_bt_node(node->child[0], NULL, rsces);
-		close(node->child[0]->out);
-	}
-	
+	node->child[0]->out = open(clean_str(node->child[1]->sentence), O_CREAT | O_RDWR | O_TRUNC, S_IRWXU);
+	execute_bt_node(node->child[0], NULL, rsces);
+	close(node->child[0]->out);
 }
 
 void execute_r_left(bt_node_t *node, ressources_t *rsces)
